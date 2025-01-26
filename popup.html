@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Username Manual Scraper</title>
+    <style>
+        body { 
+            width: 300px; 
+            padding: 10px; 
+            font-family: Arial, sans-serif;
+        }
+        button { 
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Google OAuth Client ID</h3>
+    <input type="text" id="clientIdInput" placeholder="Enter Google OAuth Client ID">
+    <button id="saveClientId">Save Client ID</button>
+    <div id="currentClientId" style="font-size: 14px; color: #555;">No Client ID saved.</div>
+
+    <h3>Google Sheet Name</h3>
+    <input type="text" id="sheetNameInput" placeholder="Enter Google Sheet Name">
+    <button id="saveSheetName">Save Sheet Name</button>
+    <div id="currentSheetName" style="font-size: 14px; color: #555;">No Sheet Name saved.</div>
+
+    <h3>Google Sheet ID</h3>
+    <input type="text" id="sheetIdInput" placeholder="Enter Google Sheet ID">
+    <button id="saveSheetId">Save Sheet ID</button>
+    <div id="currentSheetId" style="font-size: 14px; color: #555;">No Sheet ID saved.</div>
+
+    <div id="status">Status messages will appear here.</div>
+
+    <h3>Scraping Controls</h3>
+    <button id="start">Start Scraping</button>
+    <button id="stop">Stop Scraping</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>

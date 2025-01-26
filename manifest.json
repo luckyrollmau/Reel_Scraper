@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Username Scraper",
+  "version": "1.0",
+  "description": "Extract usernames from Instagram Reels and save them to Google Sheets.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://sheets.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+}
